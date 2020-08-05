@@ -20,10 +20,10 @@ class ActionBar extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
 
-    const { handleNewTodo } = this.props;
+    const { onCreateTodo } = this.props;
     const { name } = this.state;
 
-    handleNewTodo(name);
+    onCreateTodo(name);
     this.clearname();
   };
 

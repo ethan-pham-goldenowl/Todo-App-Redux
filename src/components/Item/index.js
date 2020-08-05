@@ -11,8 +11,9 @@ class Item extends Component {
   handleToggle = (e) => {
     e.preventDefault();
 
-    const { onToggleTodo } = this.props;
-    onToggleTodo();
+    const { onToggleTodo, data } = this.props;
+    const attribute = { completed: !data.completed};
+    onToggleTodo(attribute);
   };
 
   handleDelete = (e) => {

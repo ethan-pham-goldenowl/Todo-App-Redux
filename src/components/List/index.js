@@ -13,7 +13,7 @@ class List extends Component {
           <Item
             key={todo.id}
             data={todo}
-            onToggleTodo={() => onToggleTodo(todo.id)}
+            onToggleTodo={(attributes) => onToggleTodo(todo.id, attributes)}
             onRemoveTodo={() => onRemoveTodo(todo.id)}
           />
         ))}
